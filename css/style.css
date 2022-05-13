@@ -1,0 +1,46 @@
+body, html{
+    min-width: 400px;
+}
+.cabecalho .nav-link:hover{
+    color: rgb(189, 190, 192) !important;
+}
+.cabecalho a.nav-link{
+    color: aliceblue !important;
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: none !important;
+}
+.fa{
+    font-family: FontAwesome;
+}
+
+.adicionar-item:hover,.subtrair-item:hover{
+    background-color: rgb(25,135,84);
+    color: white !important;
+    transition: 0.4s;
+}
+
+.trash:hover{
+    color: red !important;
+    transition: 0.4s;
+}
+
+.description-size-limiter-2-lines{
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important; 
+}
+
+.description-size-limiter-1-line{
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important; 
+}
+
+footer a.text-dark:hover{
+    color: gray !important;
+}
