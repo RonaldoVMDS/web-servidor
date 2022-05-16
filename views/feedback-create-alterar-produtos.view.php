@@ -25,7 +25,7 @@
         </div>
         <div class="col-12">
             <button class="btn btn-secondary my-2" type="reset">Apagar</button>
-            <button class="btn btn-primary my-2" type="submit" name="cadastrar">Realizar cadastro</button>
+            <button class="btn btn-primary my-2" type="submit" name="cadastrar">Alterar cadastro</button>
         </div>
         </div>
     </fieldset>

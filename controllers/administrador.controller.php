@@ -1,10 +1,6 @@
 <?php
+$adm = $_SESSION['usuario'] ?? false;
 
-    $adm = $_SESSION['usuario'] ?? false;
-
-    if ($adm == 'Administrador') : 
-    
+if ($adm == 'admin'){
     require("views/administrador.view.php");
-
-    '';
-    endif; ?>
+}

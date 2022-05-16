@@ -1,18 +1,24 @@
+<?php
+    require ('conexao.php');
+    $bd = Conexao::get();
+    $query = $bd -> prepare("SELECT * FROM produto");
+    $query -> execute();
+    $produtos = $query -> fetchAll(PDO::FETCH_OBJ);
+?>
 <main class="container">
     <!-- Primeira linha de conteúdos -->
     <div class="row g-3">
-        <?php foreach ($produtos as $produto => $infoProduto) : ?> <!-- Início do foreach e em seguida as instruções html que serão repetidas -->
+        <?php foreach ($produtos as $produto) : ?> <!-- Início do foreach e em seguida as instruções html que serão repetidas -->
             <!-- essa é a tela de visão de todos os produtos, para cada produto será exibida todas as suas informações -->
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
                 <div class="card text-center bg-light">
-                    <!-- A estrutura dos produtos do array é: [produto['imagem', (float)preco, 'nome', 'descrição','qtde em estoque']] -->
                     <a href="produto.php">
-                    <img src="<?= $infoProduto[0] ?>" class="card-img" style="cursor: pointer;" alt="">
+                    <img src="<?= $produto->prod_imagem ?>" class="card-img" style="cursor: pointer;" alt="">
                     </a>
-                    <div class="card-header">R$ <?= $infoProduto[1] ?></div>
+                    <div class="card-header">R$ <?= $produto->prod_preco ?></div>
                     <div class="card-body">
-                        <h4 class="card-title text-success description-size-limiter-1-line"><?= $infoProduto[2] ?></h4>
-                        <p class="card-text description-size-limiter-2-lines"><?= $infoProduto[3] ?></p>
+                        <h4 class="card-title text-success description-size-limiter-1-line"><?= $produto->prod_nome ?></h4>
+                        <p class="card-text description-size-limiter-2-lines"><?= $produto->prod_descricao ?></p>
                     </div>
                 </div>
             </div>

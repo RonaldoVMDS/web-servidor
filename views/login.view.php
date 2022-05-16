@@ -1,9 +1,14 @@
 <main class="container py-2">
     <p class="bg-success text-white d-flex justify-content-center p-2 rounded"><strong>Entre com sua conta para realizar compras em nossa loja</strong></p>
-    <form action="login.php" method="POST">
+    <form action="login.php?acao=logar"method="POST">
         <?php if ($erro) : ?>
             <div class="d-flex justify-content-center rounded" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
                 Atenção: Usuário ou senha incorretos! <!-- apresentação de erro caso o usuário não tenha sido validado com sucesso -->
+            </div>
+        <?php endif; ?>
+        <?php $ajuda = false; if ($ajuda) : ?>
+            <div class="d-flex justify-content-center rounded" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
+            Insira aqui suas credenciais!<!-- apresentação de ajuda -->
             </div>
         <?php endif; ?>
         <div class="container"> <!-- Início formulário-->
@@ -11,11 +16,11 @@
                 <div class="form-group">
                     <fieldset>
                         <label>Usuário: </label>
-                        <input class="form-control " type="text" name="usuario">
+                        <input class="form-control " type="text" name="usuario" id="usuario">
                     </fieldset>
                     <fieldset>
                         <label>Senha: </label>
-                        <input class="form-control" type="password" name="senha">
+                        <input class="form-control" type="password" name="senha" id="senha">
                     </fieldset>
                     <button type="submit" style="width: 100%;" class="btn btn-primary my-2">Entrar</button>
                 </div>

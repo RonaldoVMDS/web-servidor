@@ -18,7 +18,7 @@
             </div>
         <?php
         endif;
-        if ($acao == 'cadastrar') :
+        if ($acao == 'cadastrar-usuario') :
         ?>
             <div class="d-flex justify-content-center" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
                 <?php require('controllers/feedback-store-cadastro.controller.php'); ?>

@@ -6,9 +6,9 @@
                 <legend>Entre em contato:</legend>
                 <div class="col-md-6">
                     <label class="form-label" for="contato_nome">Nome: </label>
-                    <input class="form-control mb-3" type="text" name="contato-nome">
+                    <input class="form-control mb-3" type="text" name="contato-nome" id="contato-nome">
                     <label class="form-label" for="contato-email">Email: </label>
-                    <input class="form-control mb-3" type="email" name="contato-email">
+                    <input class="form-control mb-3" type="email" name="contato-email" id="contato-email">
                 </div>
                 <div class="col-md-6">
                     <label class="mb-2 form-label" for="opcoes" id="opcoes">Opções: </label>
@@ -18,8 +18,8 @@
                         <option value="elogio">Elogios</option>
                         <option value="erro">Relatar erros</option>
                     </select>
-                    <label for="descricao" class="form-label">Mensagem:</label>
-                    <textarea name="descricao" class="form-control mb-3" placeholder="Digite aqui a sua mensagem"></textarea>
+                    <label for="mensagem" class="form-label">Mensagem:</label>
+                    <textarea name="mensagem" class="form-control mb-3" placeholder="Digite aqui a sua mensagem" id="mensagem"></textarea>
                 </div>
                 <div class="row">
                     <div class="col-auto">
