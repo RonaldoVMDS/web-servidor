@@ -9,7 +9,7 @@
                 } 
                 return self::$instancia;
             } catch(Exception $e) {
-                throw new Exception($e -> getMessage());
+                throw new Exception($e -> getMessage());//Criar uma página de erro
             }
         }
     }

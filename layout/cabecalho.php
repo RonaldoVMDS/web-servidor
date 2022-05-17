@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-success cabecalho">
     <div class="container">
         <a href="index.php" class="navbar-brand">
-            <img src="/img/Logo_RM-Sports.png" width="50" alt="">
+            <img src="img/Logo_RM-Sports.png" width="50" alt="">
         </a><!-- Logo -->
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-principal"><!-- Configuração do menu mobile-->
             <span class="navbar-toggler-icon"></span>

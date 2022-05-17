@@ -4,7 +4,7 @@
     //função para receber o nome do usuário - caso não esteja logado irá apresentar a tela "entrar" que chama o login   
     function verificaUsuario($Logado){
         if ($Logado == true){
-            return $_SESSION['usuario'] . '🧑';
+            return $_SESSION['usuario'];
         }
         return 'Entrar';
     }//caso usuário esteja logado, mosta o texto sair, se não estiver, aparece a opção de cadastrar

@@ -7,8 +7,11 @@
     <meta http-equiv="X-UA_Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/bc11010729.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="img/Logo_RM-Sports.png">
+
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- bootstrap -->
     <!-- Chamada do Framework Bootstrap -->
     <!-- JavaScript Bundle with Popper -->
