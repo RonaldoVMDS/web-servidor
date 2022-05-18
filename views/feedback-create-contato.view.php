@@ -1,7 +1,6 @@
 <form action="contato.php?acao=contato" method="POST"  name="avaliacao">
     <!-- Início formulário -->
     <div class="form-group">
-        <div class="row">
             <fieldset class="row">
                 <legend>Entre em contato:</legend>
                 <div class="col-md-6">
@@ -19,7 +18,7 @@
                         <option value="erro">Relatar erros</option>
                     </select>
                     <label for="mensagem" class="form-label">Mensagem:</label>
-                    <textarea name="mensagem" class="form-control mb-3" placeholder="Digite aqui a sua mensagem" id="mensagem"></textarea>
+                    <textarea name="mensagem" style="height: 38px;" class="form-control mb-3" placeholder="Digite aqui a sua mensagem" id="mensagem"></textarea>
                 </div>
                 <div class="row">
                     <div class="col-auto">
@@ -28,6 +27,5 @@
                     </div>
                 </div>
             </fieldset>
-        </div>
     </div>
 </form><!-- Fim formulário -->

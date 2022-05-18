@@ -1,8 +1,7 @@
 <form action="cadastro.php?acao=cadastrar-usuario" method="POST" name="cadastro">
     <!-- Início formulário-->
-    <div class="form-group row my-2 m-0">
-        <div class="row">
-            <fieldset class="row m-0">
+    <div class="form-group">
+            <fieldset class="row">
                 <legend>Dados Pessoais:</legend>
                 <div class="mb-3 col-md-6">
                     <label for="nome" class="form-label">Nome: </label>
@@ -31,12 +30,11 @@
                 </div>
             </fieldset>
         </div>
-        <div class="row m-0">
+        <div class="row">
             <div class="col-auto">
-                <button class="btn btn-secondary my-2" type="reset">Apagar</button>
-                <button class="btn btn-primary my-2" type="submit">Realizar cadastro</button>
+                <button class="btn btn-secondary" type="reset">Apagar</button>
+                <button class="btn btn-primary" type="submit">Realizar cadastro</button>
             </div>
-        </div>
     </div>
 </form><!-- Fim formulário -->
 <div style="height: 115px;" class="d-block d-sm-none"></div>

@@ -1,6 +1,6 @@
 <!-- Tela de cadastro -->
 <main>
-    <div class="container my-2 mb-5 pb-5">
+    <div class="container my-2">
         <p class="bg-success text-white d-flex justify-content-center p-2 rounded"><strong>Cadastre-se para comprar em nossa loja!</strong></p>
         <?php
         $acao = $_GET['acao'] ?? 'cadastro';

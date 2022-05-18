@@ -11,6 +11,10 @@ require('controllers/base-html.controller.php'); //Requisição da base de conte
     <?php require('controllers/cabecalho.controller.php') ?>
     <!-- Requisição da barra de navegação -->
 
+    <!-- Controlador do Administrador -->
+    <?php require("controllers/administrador-prod.controller.php") ?>
+    <!-- Controlador do Administrador -->
+
     <!-- Tela de cadastro -->
     <?php require('controllers/altera-produtos.controller.php') ?>
     <!-- Tela de cadastro -->

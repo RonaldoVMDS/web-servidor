@@ -12,7 +12,7 @@
     <!-- Requisição da barra de navegação -->
 
     <!-- Controlador do Administrador -->
-    <?php require("controllers/administrador.controller.php") ?>
+    <?php require("controllers/administrador-prod.controller.php") ?>
     <!-- Controlador do Administrador -->
 
     <?php require("controllers/barra-pesquisa.controller.php") ?>
