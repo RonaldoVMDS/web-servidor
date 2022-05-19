@@ -1,14 +1,23 @@
-<form action="cadastro-produtos.php?acao=cadastrar-produtos" method="POST" name="cadastro-produto">
+<form action="cadastro-produtos.php?acao=alterar-produtos" method="POST" name="altera-produto">
     <fieldset class="row">
         <legend>Informações do Produto:</legend>
-        <div class="col-md-6">
-            <label class="form-label" for="nome_produto">Nome do Produto: </label>
-            <input class="form-control mb-3" type="text" name="nome_produto">
-            <label class="form-label" for="desc_produto">Descrição: </label>
-            <textarea name="desc_produto" class="form-control mb-3" placeholder="Digite aqui a sua mensagem" style="height: 125px;"></textarea>
+        <div class="col-md-4">
+            <label class="form-label" for="id_produto">Id do Produto: </label>
+            <input class="form-control mb-3" type="number" name="id_produto">
         </div>
-        <div class="col-md-6">
-            <label class="form-label" for="preco_produto">Preço (Usar . Exp: 19.99)</label>
+        <div class="col-md-4">
+            <label class="mb-2 form-label" for="opcoes" id="options">Escolher alteração: </label>
+            <select class="form-select mb-3" name="opcoes">
+                <option value="nome">Nome</option>
+                <option value="preco">Preço</option>
+                <option value="qtde_p">Quantidade P:</option>
+                <option value="qtde_m">Quantidade M:</option>
+                <option value="qtde_g">Quantidade G:</option>
+                <option value="qtde_gg">Quantidade GG:</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="preco_produto">Preço (Ex: 19.99)</label>
             <input class="form-control mb-3" type="text" name="preco_produto">
             <label class="form-label" for="tamanho_p">P: </label>
             <input class="form-control mb-3" type="number" name="tamanho_p" style="width: 100px;">

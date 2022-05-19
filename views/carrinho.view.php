@@ -1,7 +1,24 @@
 <main class="container">
+    <h1 class=" text-success my-2"><i class="fa-solid fa-cart-arrow-down fa"></i> Meu carrinho</h1>
 
-    <h1>Meu carrinho</h1>
 
+
+    <ul class="list-group mb-3">
+        <li class="list-group-item py-3 border-success border-2">
+            <div class="row g-3">
+                <div class="text-center align-self-center">
+                    <h4>
+                        <a class="text-decoration-none text-success" href=""><h1>Não há produtos no carrinho.</h></a>
+                    </h4>
+                </div>
+            </div>
+            <div class="text-center m-4">
+                <a href="produtos.php" class="btn btn-outline-dark btn-lg">Continuar comprando</a>
+            </div>
+
+        </li>
+        
+    </ul>
     <ul class="list-group mb-3">
         <li class="list-group-item py-3 border-success border-2">
             <div class="row g-3 border-bottom border-success border-2">

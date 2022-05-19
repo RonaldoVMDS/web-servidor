@@ -23,5 +23,5 @@ if ($nome == '' || $descricao == '' || $preco == '' || $tamanho_p == '' || $tama
     $query -> bindParam(':tamanho_gg', $_POST['tamanho_gg']);
     $query -> bindParam(':imagem', $_POST['img_produto']);
     $query -> execute();
-    echo "Produto: $nome, cadastrado com sucesso!";
+    echo "Produto: $nome, alterado com sucesso!";
            

@@ -24,23 +24,6 @@ textarea:focus, input:focus, select:focus {
     color: red !important;
     transition: 0.4s;
 }
-
-.description-size-limiter-2-lines{
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important; 
-}
-
-.description-size-limiter-1-line{
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 1 !important;
-    -webkit-box-orient: vertical !important; 
-}
-
 footer a.text-dark:hover{
     color: gray !important;
 }

@@ -18,13 +18,13 @@ shuffle($produtosRandom);
             <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
                 <!-- A estrutura dos produtos do array é: [produto['imagem', (float)preco, 'nome', 'descrição','qtde em estoque']] -->
                 <div class="card text-center bg-light">
-                    <a href="produto.php">
+                    <a href="produto.php?id=<?=$produtosRandom[$controle]->id_produto?>">
                         <img src="<?= $produtosRandom[$controle]->prod_imagem ?>" class="card-img" style="cursor: pointer;" alt="">
                     </a>
                     <div class="card-header">R$ <?= $produtosRandom[$controle]->prod_preco ?></div>
                     <div class="card-body">
-                        <h4 class="card-title text-success description-size-limiter-1-line"><?= $produtosRandom[$controle]->prod_nome ?></h4>
-                        <p class="card-text description-size-limiter-2-lines"><?= $produtosRandom[$controle]->prod_descricao ?></p>
+                        <h4 class="card-title text-success"><?= $produtosRandom[$controle]->prod_nome ?></h4>
+                        <p class="card-text"><?= $produtosRandom[$controle]->prod_descricao ?></p>
                     </div>
                 </div>
             </div>
