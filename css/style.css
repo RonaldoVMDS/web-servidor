@@ -27,3 +27,7 @@ textarea:focus, input:focus, select:focus {
 footer a.text-dark:hover{
     color: gray !important;
 }
+
+.form-color{
+    color: rgb(94, 93, 93);
+}

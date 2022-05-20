@@ -37,14 +37,7 @@
                 </div>
                 <div class="col-6 offset-3 col-md-4 offset-md-4 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
                     <div class="input-group">
-                        <button type="submit" class="btn btn-sm border-dark subtrair-item">
-                            <i class="fa-solid fa-minus fa"></i>
-                        </button>
-                        <input type="text" value="4" class="form-control text-center border-dark">
-                        <button type="submit" class="btn btn-sm border-dark adicionar-item">
-                            <i class="fa-solid fa-plus fa"></i>
-                        </button>
-                        <button type="submit" class="btn btn-sm border-dark trash">
+                        <button type="submit" class="btn btn-lg border-dark trash">
                             <i class="fa-solid fa-trash fa"></i>
                         </button>
                     </div>
