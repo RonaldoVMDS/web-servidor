@@ -12,6 +12,8 @@ if ($nome  == '' || $sobrenome == '' || $usuario == '' || $email == '' || $senha
     header('location: cadastro.php?acao=erro-campos-vazios');
 } else if ($senha <> $confirmaSenha) {
     header('Location: cadastro.php?acao=erro-senha');
+} else if($usuario == 'admin'){
+    header('Location: cadastro.php?acao=super-user');
 } else {
     //gravar no banco de dados
     $query = $bd -> prepare("INSERT INTO usuarios (usu_nome, usu_sobrenome, usu_usuario, usu_email, usu_senha) VALUES (:nome, :sobrenome, :usuario, :email, :senha)");

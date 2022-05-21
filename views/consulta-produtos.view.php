@@ -10,13 +10,13 @@ $produtos = $query->fetchAll(PDO::FETCH_OBJ);
     <table >
         <thead>
             <ul class="list-group list-group-horizontal">
-                <li style="width: 120px;" class="list-group-item  d-flex justify-content-center">ID Produto</li>
-                <li style="width: 300px;" class="list-group-item  d-flex justify-content-center">Nome</li>
-                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center">Valor</li>
-                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center">P</li>
-                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center">M</li>
-                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center">G</li>
-                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center">GG</li>
+                <li style="width: 120px;" class="list-group-item  d-flex justify-content-center text-primary"><strong>ID Produto</strong></li>
+                <li style="width: 300px;" class="list-group-item  d-flex justify-content-center text-primary"><strong>Nome</strong></li>
+                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center text-primary"><strong>Valor</strong></li>
+                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center text-primary"><strong>P</strong></li>
+                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center text-primary"><strong>M</strong></li>
+                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center text-primary"><strong>G</strong></li>
+                <li style="width: 100px;" class="list-group-item  d-flex justify-content-center text-primary"><strong>GG</strong></li>
             </ul>
         </thead>
         <tbody >
