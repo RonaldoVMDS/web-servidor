@@ -1,19 +1,17 @@
-<?php 
+<?php
+class Carrinho {
+  private $Carrinho = Array();
 
-class Produto{
-    private $id;
-    private $nome;
-    private $img;
-    private $desc;
-    private $preco;
-    private $quantidade;
+  public function __construct() {
 
-    public function __construct($id, $nome, $img, $desc, $preco, $quantidade){
-        $this->id = $id;
-        $this->nome = $nome;
-        $this->img = $img;
-        $this->desc = $desc;
-        $this->preco = $preco;
-        $this->quantidade = $quantidade;
-    }
-};
+  }
+
+  public function insereProduto($_produto) {
+    $this->Carrinho[] = $_produto;
+    
+  }
+
+  public function getCarrinho () {
+    return $this->Carrinho;
+  }
+}
