@@ -39,7 +39,8 @@ switch ($nomeQuantidade) {
 
 require('conexao.php');
 $bd = Conexao::get();
-$query = $bd->prepare("SELECT * FROM produto WHERE id_produto = $id");
+$query = $bd->prepare("SELECT * FROM produto WHERE id_produto = :id");
+$query -> bindParam(':id', $id);
 $query->execute();
 $produtoBD = $query->fetch(PDO::FETCH_OBJ);
 
