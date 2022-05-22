@@ -27,7 +27,6 @@ class Carrinho
       if ($this->Carrinho[$i]->id == $id) {
         unset($this->Carrinho[$i]);
         sort($this->Carrinho);
-        header('Location: carrinho.php');
       }
     }
   }
