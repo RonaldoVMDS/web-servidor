@@ -2,6 +2,7 @@
 require('conexao.php');
 $bd = Conexao::get();
 $id = $_GET['id'];
+$erro = $_GET['erro'] ?? '';
 $query = $bd->prepare("SELECT * FROM produto WHERE id_produto = $id");
 $query->execute();
 $produto = $query->fetch(PDO::FETCH_OBJ);
@@ -24,7 +25,7 @@ $quantidade_gg = $produto->tamanho_gg;
             <div class="row">
                 <div class="col-md-6 col-sm-4 col-3">
                     <div class="card">
-                        <img class="card-img" src="<?= $img ?>" alt="">
+                        <img class="card-img border border-3 border-success " src="<?= $img ?>" alt="">
                     </div>
                 </div><!-- imagem do produto -->
                 <div class="col-9 col-sm-8 col-md-4 offset-md-2">
@@ -42,15 +43,21 @@ $quantidade_gg = $produto->tamanho_gg;
                     <small class="border border-success rounded px-3">G: <?= $quantidade_g ?></small>
                     <small class="border border-success rounded px-3">GG: <?= $quantidade_gg ?></small>
                     </div>
-                    <select class="form-select mb-5 text-center border-success" name="opcoes">
+                    <select class="form-select mb-4 text-center border-success" name="opcoes">
                         <option value="quantidade_p">P</option>
                         <option value="quantidade_m" selected>M</option>
                         <option value="quantidade_g">G</option>
                         <option value="quantidade_gg">GG</option>
                     </select>
+                    <?php
+                        if($erro == 'quantidade') : ?>
+                        <div class="d-flex justify-content-center text-center rounded py-2 mb-2" style="background-color: #fafae1; font-size: 19px;">
+                            A quantidade máxima disponível foi excedida!
+                        </div>
+                        <?php endif; ?>
                     <h5 class="form-color mb-2">Selecionar quantidade de produtos:</h5>
                     <div class="input-group mb-5">
-                        <input type="number" name="qtde" value="1" class="form-control text-center border-dark">
+                        <input type="number" name="qtde" value="1" min="1" class="form-control text-center border-dark">
                         <button type="reset" class="btn btn-sm border-dark trash">
                             <i class="fa-solid fa-trash fa"></i>
                         </button>

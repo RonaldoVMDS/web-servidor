@@ -3,6 +3,9 @@
 if (empty($_SESSION['logado']) || $_SESSION['logado'] == false) {
     header('Location: login.php');
 }
+
+$idRemover = $_GET['removerCarrinho'] ?? '';
+$id = $_GET['id_prod'] ?? '';
 $nome = $_GET['nome'] ?? '';
 $img = $_GET['img'] ?? '';
 $preco = $_GET['preco'] ?? '';
@@ -13,24 +16,33 @@ $quantidade_g = 0;
 $quantidade_gg = 0;
 $nomeQuantidade = $_POST['opcoes'] ?? '';
 $quantidade = $_POST['qtde'] ?? '';
-switch($nomeQuantidade){
+$nomeProdutoBD;
+
+switch ($nomeQuantidade) {
     case 'quantidade_p';
-    $quantidade_p = $quantidade;
-    break;
+        $quantidade_p = $quantidade;
+        $nomeProdutoBD = "tamanho_p";
+        break;
     case 'quantidade_m';
-    $quantidade_m = $quantidade;
-    break;
+        $quantidade_m = $quantidade;
+        $nomeProdutoBD = "tamanho_m";
+        break;
     case 'quantidade_g';
-    $quantidade_g = $quantidade;
-    break;
+        $quantidade_g = $quantidade;
+        $nomeProdutoBD = "tamanho_g";
+        break;
     case 'quantidade_gg';
-    $quantidade_gg = $quantidade;
-    break;
+        $quantidade_gg = $quantidade;
+        $nomeProdutoBD = "tamanho_gg";
+        break;
 }
 
-$idRemover = $_GET['removerCarrinho'] ?? '';
+require('conexao.php');
+$bd = Conexao::get();
+$query = $bd->prepare("SELECT * FROM produto WHERE id_produto = $id");
+$query->execute();
+$produtoBD = $query->fetch(PDO::FETCH_OBJ);
 
-$id = $_GET['id_prod'] ?? '';
 if (isset($_SESSION['produtos-carrinho'])) {
     $Carrinho = $_SESSION['produtos-carrinho'];
 } else {
@@ -38,13 +50,17 @@ if (isset($_SESSION['produtos-carrinho'])) {
 }
 
 if (($nome != '' && $img != '' && $preco != '' && $desc != '' && $quantidade != '' && $id)) {
-    $produto = new Produto($id, $nome, $img, $desc, $preco, $quantidade_p, $quantidade_m, $quantidade_g, $quantidade_gg);
-    $Carrinho->insereProduto($produto, $nomeQuantidade);
-    $_SESSION['produtos-carrinho'] = $Carrinho;
-    header('Location: carrinho.php');
+    if ($quantidade > $produtoBD->$nomeProdutoBD) {
+        header('Location: produto.php?id=' . $id . '&erro=quantidade');
+    } else {
+        $produto = new Produto($id, $nome, $img, $desc, $preco, $quantidade_p, $quantidade_m, $quantidade_g, $quantidade_gg);
+        $Carrinho->insereProduto($produto, $nomeQuantidade);
+        $_SESSION['produtos-carrinho'] = $Carrinho;
+        header('Location: carrinho.php');
+    }
 }
 
-if($idRemover != ''){
+if ($idRemover != '') {
     $Carrinho->removeProduto($idRemover);
 }
 

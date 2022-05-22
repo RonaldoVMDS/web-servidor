@@ -11,7 +11,7 @@
                     <?php
                     $quantidadeTotal = $prod->quantidade_p + $prod->quantidade_m + $prod->quantidade_g + $prod->quantidade_gg;
                     ?>
-                    <div class="row g-3 border-bottom border-success border-2">
+                    <div class="row g-3 border-bottom border-success border-2 pt-2 pb-3">
                         <div class="col-4 col-md-3 col-lg-2">
                             <img src="<?= $prod->img ?>" alt="" class="img-fluid">
                         </div>
@@ -47,7 +47,7 @@
                                     <small class="text-secondary d-block">GG: <?= $prod->quantidade_gg ?></small>
                                 <?php endif; ?>
                                 <small class="text-secondary d-block">Preço item: R$ <?= $prod->preco ?></small>
-                                <span class="text-dark d-block">Total Item: <?= $prod->preco * $quantidadeTotal ?></span>
+                                <span class="text-dark d-block">Total Item: R$ <?= $prod->preco * $quantidadeTotal ?></span>
                             </div>
                         </div>
                     </div>
