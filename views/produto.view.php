@@ -32,16 +32,16 @@ $quantidade_gg = $produto->tamanho_gg;
                     <!-- barra com o nome, preço, tamanho e cor do produto e frete -->
                     <h2 class="card-title text-success"><?= $nome ?></h2>
                     <small class="text-success">Cód: <?= $id_prod ?></small>
-                    <div class="mb-5">
+                    <div class="mb-3">
                         <h5 class="text-justify text-success"><?= $desc ?></h5>
                     </div>
-                    <h4 class="form-color card-text mb-5">Preço: R$: <?= $preco ?></h4>
+                    <h4 class=" card-text mb-4">Preço: R$: <?= $preco ?></h4>
                     <label class="form-color form-label d-block" for="opcoes" id="opcoes">Tamanho do Produto:</label>
                     <div class="my-3 d-flex justify-content-around ">
-                    <small class="border border-success rounded px-3">P: <?= $quantidade_p ?></small>
-                    <small class="border border-success rounded px-3">M: <?= $quantidade_m ?></small>
-                    <small class="border border-success rounded px-3">G: <?= $quantidade_g ?></small>
-                    <small class="border border-success rounded px-3">GG: <?= $quantidade_gg ?></small>
+                    <small class="border border-success rounded px-2">P: <?= $quantidade_p ?> Un</small>
+                    <small class="border border-success rounded px-2">M: <?= $quantidade_m ?> Un</small>
+                    <small class="border border-success rounded px-2">G: <?= $quantidade_g ?> Un</small>
+                    <small class="border border-success rounded px-2">GG: <?= $quantidade_gg ?> Un</small>
                     </div>
                     <select class="form-select mb-4 text-center border-success" name="opcoes">
                         <option value="quantidade_p">P</option>
@@ -57,7 +57,7 @@ $quantidade_gg = $produto->tamanho_gg;
                         </div>
                         <?php endif; ?>
                     <h5 class="form-color mb-2">Selecionar quantidade de produtos:</h5>
-                    <div class="input-group mb-5">
+                    <div class="input-group mb-3">
                         <input type="number" name="qtde" value="1" min="1" class="form-control text-center border-dark">
                         <button type="reset" class="btn btn-sm border-dark trash">
                             <i class="fa-solid fa-trash fa"></i>
