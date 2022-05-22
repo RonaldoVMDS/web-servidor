@@ -27,6 +27,10 @@ class Produto{
   {
     return $this->$tamanho += $value;
   }
+  public function addQuantMax($tamanho, $value)
+  {
+    return $this->$tamanho = $value;
+  }
 
     public function __get($produtoInfo)
     {

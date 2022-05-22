@@ -51,8 +51,9 @@ $quantidade_gg = $produto->tamanho_gg;
                     </select>
                     <?php
                         if($erro == 'quantidade') : ?>
-                        <div class="d-flex justify-content-center text-center rounded py-2 mb-2" style="background-color: #fafae1; font-size: 19px;">
-                            A quantidade máxima disponível foi excedida!
+                        <div class=" justify-content-center text-center rounded py-2 mb-2" style="background-color: #fafae1;">
+                            <p style="font-size: 19px">Quantia solicitada é maior que a disponível, ajustada para o máximo possível no carrinho</p>
+                            <a class="text-decoration-none" href="carrinho.php">Ir para o carrinho</a>
                         </div>
                         <?php endif; ?>
                     <h5 class="form-color mb-2">Selecionar quantidade de produtos:</h5>
