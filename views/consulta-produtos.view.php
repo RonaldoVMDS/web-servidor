@@ -35,3 +35,6 @@ $produtos = $query->fetchAll(PDO::FETCH_OBJ);
     </table>
     </div>
 </main>
+<div style="height: 115px;" class="d-block d-sm-none"></div>
+<div style="height: 67px;" class="d-none d-sm-block d-md-none"></div>
+<div style="height: 43px;" class="d-none d-md-block"></div>

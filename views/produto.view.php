@@ -28,7 +28,7 @@ $quantidade_gg = $produto->tamanho_gg;
                         <img class="card-img border border-3 border-success " src="<?= $img ?>" alt="">
                     </div>
                 </div><!-- imagem do produto -->
-                <div class="col-9 col-sm-8 col-md-4 offset-md-2">
+                <div class="col-9 col-sm-8 col-md-4 offset-md-1">
                     <!-- barra com o nome, preço, tamanho e cor do produto e frete -->
                     <h2 class="card-title text-success"><?= $nome ?></h2>
                     <small class="text-success">Cód: <?= $id_prod ?></small>
@@ -64,10 +64,10 @@ $quantidade_gg = $produto->tamanho_gg;
                         </button>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 mt-3">
                             <a href="produtos.php" class="btn btn-outline-dark">Continuar comprando</a>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mt-3">
                             <button type="submit" class="btn btn-success">
                                 Adicionar ao Carrinho
                             </button>
@@ -81,3 +81,6 @@ $quantidade_gg = $produto->tamanho_gg;
     </div>
 
 </main>
+<div style="height: 115px;" class="d-block d-sm-none"></div>
+<div style="height: 67px;" class="d-none d-sm-block d-md-none"></div>
+<div style="height: 43px;" class="d-none d-md-block"></div>
