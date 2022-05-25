@@ -1,0 +1,18 @@
+{
+    "name": "ronal_u182kv8/projeto1",
+    "autoload": {
+        "psr-4": {
+            "RonalU182kv8\\Projeto1\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RonaldoVMDS",
+            "email": "ronaldovinicius.machado@hotmail.com"
+        }
+    ],
+    "autoload": {
+      "classmap": ["./"]  
+    }, 
+    "require": {}
+}

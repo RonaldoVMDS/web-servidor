@@ -12,7 +12,7 @@ $imagem = $_POST["img_produto"] ?? '';
 
 if ($nome == '' || $descricao == '' || $preco == '' || $tamanho_p == '' || $tamanho_m == '' || $tamanho_g == '' || $tamanho_gg == '' || $imagem == '') {
     header('location: cadastro-produtos.php?acao=erro-campos-vazios');
-} 
+} else {
     $query = $bd -> prepare("INSERT INTO produto (prod_nome, prod_preco, prod_descricao, tamanho_p, tamanho_m, tamanho_g, tamanho_gg, prod_imagem) VALUES (:nome, :preco, :descricao, :tamanho_p, :tamanho_m, :tamanho_g, :tamanho_gg, :imagem)");
     $query -> bindParam(':nome', $_POST['nome_produto']);
     $query -> bindParam(':preco', $_POST['preco_produto']);
@@ -24,4 +24,4 @@ if ($nome == '' || $descricao == '' || $preco == '' || $tamanho_p == '' || $tama
     $query -> bindParam(':imagem', $_POST['img_produto']);
     $query -> execute();
     echo "Produto: $nome, cadastrado com sucesso!";
-           
+}    

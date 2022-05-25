@@ -58,7 +58,7 @@
                         Valor Total: R$ <?= $total; ?>
                     </h4>
                     <a href="produtos.php" class="btn btn-outline-dark btn-lg">Continuar comprando</a>
-                    <button class="btn btn-success btn-lg">Comprar do Carrinho</button>
+                    <a href="checkout.php" class="btn btn-success btn-lg">Comprar do Carrinho</a>
                 </div>
         </li>
     </ul>

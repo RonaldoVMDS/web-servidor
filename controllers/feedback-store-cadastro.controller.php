@@ -3,10 +3,20 @@ require ('conexao.php');
 $bd = Conexao::get();
 $nome = $_POST['nome'] ?? '';
 $sobrenome = $_POST['sobrenome'] ?? '';
-$usuario = $_POST['usuario'] ?? '';
+$usuaario = $_POST['usuario'] ?? '';
 $email = $_POST['email'] ?? '';
 $senha = $_POST['senha'] ?? '';
 $confirmaSenha = $_POST['confirma-senha'] ?? '';
+
+$query = $bd -> prepare("SELECT * FROM usuarios");
+$query -> execute();
+$usuarios = $query->fetchAll(PDO::FETCH_OBJ); 
+
+foreach ($usuarios as $usuario){
+    if ($usuaario == $usuario->usu_usuario){
+        header('location: cadastro.php?acao=erro-usu-existe');
+    }
+}
 
 if ($nome  == '' || $sobrenome == '' || $usuario == '' || $email == '' || $senha == '' || $confirmaSenha == '') {
     header('location: cadastro.php?acao=erro-campos-vazios');
@@ -23,5 +33,5 @@ if ($nome  == '' || $sobrenome == '' || $usuario == '' || $email == '' || $senha
     $query -> bindParam(':email', $_POST['email']);
     $query -> bindParam(':senha', $_POST['senha']);
     $query -> execute();
-    echo "Cadastro do usuario: $usuario, realizado com sucesso! <a class='text-primary text-decoration-none' href='login.php'>&nbspEntrar</a>";
+    echo "Cadastro do usuario: $usuaario, realizado com sucesso! <a class='text-primary text-decoration-none' href='login.php'>&nbspEntrar</a>";
 }   
