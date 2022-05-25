@@ -18,6 +18,13 @@
             </div>
         <?php
         endif;
+        if ($acao == 'erro-usu-existe') :
+            ?>
+                <div class="d-flex justify-content-center rounded" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
+                    Nome de usuario já em uso, escolha outro!
+                </div>
+            <?php
+            endif;
         if ($acao == 'super-user') :
             ?>
                 <div class="d-flex justify-content-center rounded" style="background-color: #fafae1; height: 35px;line-height: 35px; ">

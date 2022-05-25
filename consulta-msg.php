@@ -10,8 +10,12 @@
     <?php require('controllers/cabecalho.controller.php') ?>
     <!-- Requisição da barra de navegação -->
 
-    <!-- Controlador do Administrador -->
-    <?php require("controllers/administrador-cont.controller.php") ?>
-    <!-- Controlador do Administrador -->
+    <!-- Tela de cadastro -->
+    <?php require('controllers/consulta-mensagem.controller.php') ?>
+    <!-- Tela de cadastro -->
 
+    <!-- Rodapé -->
+    <?php require('controllers/rodape.controller.php') ?>
+    <!-- Rodapé -->
+</body>
 </html>

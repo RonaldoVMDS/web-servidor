@@ -1,27 +1,39 @@
 <?php
 require ('conexao.php');
 $bd = Conexao::get();
-$nome = $_POST['nome_produto'] ?? '';
-$descricao = $_POST['desc_produto'] ?? '';
-$preco = $_POST['preco_produto'] ?? '';
-$tamanho_p = $_POST['tamanho_p'] ?? '';
-$tamanho_m = $_POST['tamanho_m'] ?? '';
-$tamanho_g = $_POST['tamanho_g'] ?? '';
-$tamanho_gg = $_POST['tamanho_gg'] ?? '';
-$imagem = $_POST["img_produto"] ?? '';
+$id = $_POST['id_produto'] ?? '';
+$opcao = $_POST['opcoes'] ?? '';
+$novo_valor_texto = $_POST['altera-texto'] ?? '';
+$novo_valor_numero = $_POST['altera-numero'] ?? '';
 
-if ($nome == '' || $descricao == '' || $preco == '' || $tamanho_p == '' || $tamanho_m == '' || $tamanho_g == '' || $tamanho_gg == '' || $imagem == '') {
-    header('location: cadastro-produtos.php?acao=erro-campos-vazios');
-} 
-    $query = $bd -> prepare("ALTER TABLE 'produto' ");
-    $query -> bindParam(':nome', $_POST['nome_produto']);
-    $query -> bindParam(':preco', $_POST['preco_produto']);
-    $query -> bindParam(':descricao', $_POST['desc_produto']);
-    $query -> bindParam(':tamanho_p', $_POST['tamanho_p']);
-    $query -> bindParam(':tamanho_m', $_POST['tamanho_m']);
-    $query -> bindParam(':tamanho_g', $_POST['tamanho_g']);
-    $query -> bindParam(':tamanho_gg', $_POST['tamanho_gg']);
-    $query -> bindParam(':imagem', $_POST['img_produto']);
-    $query -> execute();
-    echo "Produto: $nome, alterado com sucesso!";
-           
+if ($id == ''){
+    header('location: altera-produtos.php?acao=erro-id-vazio');
+}
+
+$query = $bd->prepare("SELECT * FROM produto WHERE id_produto = $id");
+$query->execute();
+$produto = $query->fetch(PDO::FETCH_OBJ);
+
+if ($opcao == 'escolha'){
+    header('location: altera-produtos.php?acao=erro-escolha');
+}
+
+if ($opcao == 'prod_nome' || $opcao == 'prod_preco' || $opcao == 'prod_descricao' || $opcao == 'prod_imagem'){
+    if ($novo_valor_texto == ''){
+        header('location: altera-produtos.php?acao=erro-campos-vazios');
+    } else {
+        $query = $bd -> prepare("UPDATE produto SET $opcao = '$novo_valor_texto' WHERE id_produto = $id");
+        $query -> execute();
+        echo "Produto alterado com sucesso!";   
+    }
+}
+
+if ($opcao == 'tamanho_p' || $opcao == 'tamanho_m' || $opcao == 'tamanho_g' || $opcao == 'tamanho_gg'){
+    if ($novo_valor_numero == ''){
+        header('location: altera-produtos.php?acao=erro-campos-vazios');
+    } else {
+        $query = $bd -> prepare("UPDATE produto SET $opcao = '$novo_valor_numero' WHERE id_produto = $id");
+        $query -> execute();
+        echo "Produto alterado com sucesso!";
+    }
+}         
