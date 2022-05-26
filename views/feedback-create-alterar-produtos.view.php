@@ -3,7 +3,7 @@
         <legend>Informações do Produto:</legend>
         <div class="col-md-4">
             <label class="form-label" for="id_produto">Id do Produto: </label>
-            <input class="form-control mb-3" type="number" name="id_produto">
+            <input class="form-control mb-3" type="number" name="id_produto" required>
         </div>
         <div class="col-md-8">
             <label class="mb-2 form-label" for="opcoes" id="opcoes">Escolher alteração: </label>

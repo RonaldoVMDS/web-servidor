@@ -4,14 +4,14 @@
         <?php
         $acao = $_GET['acao'] ?? 'exclui';
         if ($acao == 'erro-id-vazio') : ?>
-                <div class="d-flex justify-content-center" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
-                    Preencha um id!
-                </div>
+            <div class="d-flex justify-content-center" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
+                Preencha um id!
+            </div>
         <?php
-            endif;
+        endif;
         if ($acao == 'excluir-produto') :
         ?>
-            <?php require('controllers/feedback-store-excluir-produtos.controller.php'); 
+        <?php require('controllers/feedback-store-excluir-produtos.controller.php');
         else :
             require('controllers/feedback-create-excluir-produtos.controller.php');
         endif;

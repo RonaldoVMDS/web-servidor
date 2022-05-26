@@ -57,7 +57,7 @@ if (($nome != '' && $img != '' && $preco != '' && $desc != '' && $quantidade != 
         $produto = new Produto($produtoBD->id_produto, $produtoBD->prod_nome, $produtoBD->prod_imagem, $produtoBD->prod_descricao, $produtoBD->prod_preco, $quantidade_p, $quantidade_m, $quantidade_g, $quantidade_gg);
         $Carrinho->insereProdutoMaxQuant($produto, $produtoBD, $nomeQuantidade, $nomeProdutoBD);
         $_SESSION['produtos-carrinho'] = $Carrinho;
-        header('Location: produto.php?id=' . $id . '&erro=quantidade');
+        header('Location: /produto?id=' . $id . '&erro=quantidade');
     }else {
         $produto = new Produto($id, $nome, $img, $desc, $preco, $quantidade_p, $quantidade_m, $quantidade_g, $quantidade_gg);
         $Carrinho->insereProduto($produto, $nomeQuantidade);

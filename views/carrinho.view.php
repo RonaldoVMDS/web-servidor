@@ -57,8 +57,8 @@
                     <h4>
                         Valor Total: R$ <?= $total; ?>
                     </h4>
-                    <a href="produtos.php" class="btn btn-outline-dark btn-lg">Continuar comprando</a>
-                    <a href="checkout.php" class="btn btn-success btn-lg">Comprar do Carrinho</a>
+                    <a href="/produtos" class="btn btn-outline-dark btn-lg">Continuar comprando</a>
+                    <a href="" class="btn btn-success btn-lg">Comprar do Carrinho</a>
                 </div>
         </li>
     </ul>
@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="text-center m-4">
-            <a href="produtos.php" class="btn btn-outline-dark btn-lg">Continuar comprando</a>
+            <a href="/produtos" class="btn btn-outline-dark btn-lg">Continuar comprando</a>
         </div>
 
     </ul>

@@ -14,5 +14,7 @@
     "autoload": {
       "classmap": ["./"]  
     }, 
-    "require": {}
+    "require": {
+        "pecee/simple-router": "4.3.7.2"
+    }
 }

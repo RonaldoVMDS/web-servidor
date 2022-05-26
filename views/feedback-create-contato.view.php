@@ -1,4 +1,4 @@
-<form action="contato.php?acao=contato" method="POST"  name="avaliacao">
+<form action="contato.view.php?acao=contato" method="POST"  name="avaliacao">
     <!-- Início formulário -->
     <div class="form-group">
             <fieldset class="row">

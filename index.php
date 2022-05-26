@@ -1,31 +1,15 @@
 <?php 
-    session_start();//inicia a sessão
-    require('controllers/base-html.controller.php');//Requisição da base de conteúdos html, que compõe quase toda a estruta head
-?>
-    <title>RM Sports</title><!-- Complemento e fechamento da estrutura head, adicionando o título -->
-</head>
 
-<body>
+require 'vendor/autoload.php';
 
-    <!-- Requisição da barra de navegação -->
-    <?php require('controllers/cabecalho.controller.php') ?>
-    <!-- Requisição do cabeçaljho/ barra de navegação -->
-    
-    <!-- requisição da barra de pesquisa -->
-    <?php require('controllers/barra-pesquisa.controller.php') ?>
-    <!-- requisição da barra de pesquisa -->        
+use Pecee\SimpleRouter\SimpleRouter as Router;
 
-    <!-- Banner Principal -->
-    <?php require("controllers/main-banner.controller.php") ?>
-    <!-- Banner Principal -->
-
-    <!-- Produtos principais -->
-    <?php require("controllers/produtos-principais.controller.php") ?>
-    <!-- Produtos principais -->
-
-    <!-- Rodapé -->
-    <?php require('controllers/rodape.controller.php') ?>
-    <!-- Rodapé -->
-</body>
-
-</html>
+Router::get('/', "produtosPrincipaisController@paginaProdutosPrincipais");
+Router::get('/contato', "contatoController@paginaContato");
+Router::get('/produtos', "produtosController@paginaProdutos");
+Router::post('/produtos', "produtosController@paginaProdutos");
+Router::post('/produto', "produtoController@paginaProduto");
+Router::get('/produto', "produtoController@paginaProduto");
+Router::get('/cadastro', "cadastroController@paginaCadastro");
+Router::post('/cadastro', "cadastroController@paginaCadastro");
+Router::start();

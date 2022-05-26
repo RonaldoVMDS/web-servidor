@@ -11,29 +11,29 @@
         <?php
         endif;
         if ($acao == 'erro-id-vazio') :
-            ?>
-                <div class="d-flex justify-content-center" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
-                    Preencha um id!
-                </div>
-            <?php
-            endif;
-            if ($acao == 'erro-id-invalido') :
-                ?>
-                    <div class="d-flex justify-content-center" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
-                        Insira um Id valido!
-                    </div>
-                <?php
-                endif;
+        ?>
+            <div class="d-flex justify-content-center" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
+                Preencha um id!
+            </div>
+        <?php
+        endif;
+        if ($acao == 'erro-id-invalido') :
+        ?>
+            <div class="d-flex justify-content-center" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
+                Insira um Id valido!
+            </div>
+        <?php
+        endif;
         if ($acao == 'erro-escolha') :
-            ?>
-                <div class="d-flex justify-content-center" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
-                    Escolha uma opção!
-                </div>
-            <?php
-            endif;
+        ?>
+            <div class="d-flex justify-content-center" style="background-color: #fafae1; height: 35px;line-height: 35px; ">
+                Escolha uma opção!
+            </div>
+        <?php
+        endif;
         if ($acao == 'alterar-produto') :
         ?>
-            <?php require('controllers/feedback-store-alterar-produtos.controller.php'); 
+        <?php require('controllers/feedback-store-alterar-produtos.controller.php');
         else :
             require('controllers/feedback-create-alterar-produtos.controller.php');
         endif;

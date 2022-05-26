@@ -18,7 +18,7 @@
         if ($Logado == true){
             return 'logout.php';
         }
-        return 'cadastro.php';
+        return '/cadastro';
     }
 
 require('layout/cabecalho.php');

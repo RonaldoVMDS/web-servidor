@@ -14,16 +14,16 @@ $usuarios = $query->fetchAll(PDO::FETCH_OBJ);
 
 foreach ($usuarios as $usuario){
     if ($usuaario == $usuario->usu_usuario){
-        header('location: cadastro.php?acao=erro-usu-existe');
+        header('location: /cadastro?acao=erro-usu-existe');
     }
 }
 
 if ($nome  == '' || $sobrenome == '' || $usuario == '' || $email == '' || $senha == '' || $confirmaSenha == '') {
-    header('location: cadastro.php?acao=erro-campos-vazios');
+    header('location: /cadastro?acao=erro-campos-vazios');
 } else if ($senha <> $confirmaSenha) {
-    header('Location: cadastro.php?acao=erro-senha');
+    header('Location: /cadastro?acao=erro-senha');
 } else if($usuario == 'admin'){
-    header('Location: cadastro.php?acao=super-user');
+    header('Location: /cadastro?acao=super-user');
 } else {
     //gravar no banco de dados
     $query = $bd -> prepare("INSERT INTO usuarios (usu_nome, usu_sobrenome, usu_usuario, usu_email, usu_senha) VALUES (:nome, :sobrenome, :usuario, :email, :senha)");
@@ -33,5 +33,5 @@ if ($nome  == '' || $sobrenome == '' || $usuario == '' || $email == '' || $senha
     $query -> bindParam(':email', $_POST['email']);
     $query -> bindParam(':senha', $_POST['senha']);
     $query -> execute();
-    echo "Cadastro do usuario: $usuaario, realizado com sucesso! <a class='text-primary text-decoration-none' href='login.php'>&nbspEntrar</a>";
+    echo "Cadastro do usuario: $usuaario, realizado com sucesso! <a class='text-primary text-decoration-none' href='/login'>&nbspEntrar</a>";
 }   

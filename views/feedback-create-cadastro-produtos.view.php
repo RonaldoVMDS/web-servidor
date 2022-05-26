@@ -3,33 +3,33 @@
         <legend>Informações do Produto:</legend>
         <div class="col-md-6">
             <label class="form-label" for="nome_produto">Nome do Produto: </label>
-            <input class="form-control mb-3" type="text" name="nome_produto">
+            <input class="form-control mb-3" type="text" name="nome_produto" required>
         </div>
         <div class="col-md-6">
             <label class="form-label" for="preco_produto">Preço (Usar . Exp: 19.99)</label>
-            <input class="form-control mb-3" type="text" name="preco_produto">
+            <input class="form-control mb-3" type="text" name="preco_produto" required>
         </div>
         <div class="col-md-6">
             <label class="form-label" for="desc_produto">Descrição: </label>
-            <textarea name="desc_produto" class="form-control mb-3" placeholder="Digite aqui a sua mensagem" style="height: 125px;"></textarea>
+            <textarea name="desc_produto" class="form-control mb-3" placeholder="Digite aqui a sua mensagem" style="height: 125px;" required></textarea>
         </div>
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-3">
                 <label class="form-label" for="tamanho_p">P: </label>
-                <input class="form-control mb-3" type="number" name="tamanho_p">
+                <input class="form-control mb-3" type="number" name="tamanho_p" required>
                 </div>
                 <div class="col-md-3">
                 <label class="form-label" for="tamanho_m">M: </label>
-                <input class="form-control mb-3" type="number" name="tamanho_m">
+                <input class="form-control mb-3" type="number" name="tamanho_m" required>
                 </div>
                 <div class="col-md-3">
                 <label class="form-label" for="tamanho_g">G: </label>
-                <input class="form-control mb-3" type="number" name="tamanho_g">
+                <input class="form-control mb-3" type="number" name="tamanho_g" required>
                 </div>
                 <div class="col-md-3">
                 <label class="form-label" for="tamanho_gg">GG: </label>
-                <input class="form-control mb-3" type="number" name="tamanho_gg">
+                <input class="form-control mb-3" type="number" name="tamanho_gg" required>
                 </div>
             </div>
 

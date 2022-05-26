@@ -1,4 +1,4 @@
-<form action="cadastro.php?acao=cadastrar-usuario" method="POST" name="cadastro">
+<form action="/cadastro?acao=cadastrar-usuario" method="POST" name="cadastro">
     <!-- Início formulário-->
     <div class="form-group">
             <fieldset class="row">
